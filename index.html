@@ -1,31 +1,35 @@
-<!-- shxyder -->
-<!-- ugs file -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>mega client</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display SVG</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .svg-container {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <script>
-    async function loadAndRun() {
-      const urls = [
-        "https://cdn.jsdelivr.net/gh/shayderrr/eaglercraft@main/lumine/cllumineclient.html.part1",
-        "https://cdn.jsdelivr.net/gh/shayderrr/eaglercraft@main/lumine/cllumineclient.html.part2"
-      ];
 
-      let fullHtml = "";
-      for (const u of urls) {
-        const res = await fetch(u);
-        fullHtml += await res.text();
-      }
+    <div class="svg-container">
+        <!-- Method 1: Using an img tag (Recommended) -->
+        <img src="https://cdn.jsdelivr.net/gh/Mr-Calvin-Math-Class/discrete-chaos-3164@main/INVADDEX.SVG" alt="INVADDEX SVG">
+    </div>
 
-      document.open();
-      document.write(fullHtml);
-      document.close();
-    }
-
-    loadAndRun();
-  </script>
 </body>
 </html>
